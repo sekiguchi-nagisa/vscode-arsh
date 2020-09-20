@@ -1,0 +1,25 @@
+{
+    "name": "vscode-ydsh",
+    "displayName": "vscode-ydsh",
+    "description": "vscode extension for ydsh",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.49.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "ydsh",
+            "aliases": ["ydsh", "ydsh"],
+            "extensions": ["ds"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "ydsh",
+            "scopeName": "",
+            "path": "./syntaxes/ydsh.tmLanguage.json"
+        }]
+    }
+}
