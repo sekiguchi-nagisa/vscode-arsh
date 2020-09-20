@@ -40,5 +40,8 @@
     },
     "devDependencies": {
         "vsce": "1.79.5"
+    },
+    "scripts": {
+        "build": "vsce package"
     }
 }
