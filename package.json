@@ -3,23 +3,42 @@
     "displayName": "vscode-ydsh",
     "description": "vscode extension for ydsh",
     "version": "0.0.1",
+    "license": "SEE LICENSE",
+    "homepage": "https://github.com/sekiguchi-nagisa/vscode-ydsh/blob/master/README.md",
     "engines": {
         "vscode": "^1.49.0"
     },
     "categories": [
         "Programming Languages"
     ],
+    "publisher": "nagisa-sekiguchi",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sekiguchi-nagisa/vscode-ydsh.git"
+    },
     "contributes": {
-        "languages": [{
-            "id": "ydsh",
-            "aliases": ["ydsh", "ydsh"],
-            "extensions": ["ds"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "ydsh",
-            "scopeName": "source.ydsh",
-            "path": "./syntaxes/ydsh.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "ydsh",
+                "aliases": [
+                    "ydsh",
+                    "ydsh"
+                ],
+                "extensions": [
+                    "ds"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "ydsh",
+                "scopeName": "source.ydsh",
+                "path": "./syntaxes/ydsh.tmLanguage.json"
+            }
+        ]
+    },
+    "devDependencies": {
+        "vsce": "1.79.5"
     }
 }
