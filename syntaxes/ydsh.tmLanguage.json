@@ -7,26 +7,136 @@
         },
         {
             "include": "#strings"
+        },
+        {
+            "include": "#comment"
+        },
+        {
+            "include": "#variable"
+        },
+        {
+            "include": "#operators"
+        },
+        {
+            "include": "#constants"
+        },
+        {
+            "include": "#storages"
         }
     ],
     "repository": {
-        "keywords": {
-            "patterns": [{
-                "name": "keyword.control.ydsh",
-                "match": "\\b(if|while|for|return)\\b"
-            }]
-        },
-        "strings": {
-            "name": "string.quoted.double.ydsh",
-            "begin": "\"",
-            "end": "\"",
+        "comment": {
             "patterns": [
                 {
-                    "name": "constant.character.escape.ydsh",
-                    "match": "\\\\."
+                    "begin": "#",
+                    "beginCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.comment.ydsh"
+                        }
+                    },
+                    "end": "$",
+                    "name": "comment.line.number-sign.ydsh"
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.ydsh",
+                    "match": "\\b(alias|assert|break|case|catch|continue|coproc|do|else|elif|finally|for|if|return|try|throw|while)\\b"
+                },
+                {
+                    "name": "keyword.other.ydsh",
+                    "match": "\\b(as|is|in|with|new)\\b"
+                }
+            ]
+        },
+        "storages": {
+            "patterns": [
+                {
+                    "name": "storage.type.ydsh",
+                    "match": "\\b(var|let|import-env|export-env|function|source!|source)\\b"
+                }
+            ]
+        },
+        "operators": {
+            "patterns": [
+                {
+                    "name": "keyword.operator.ydsh",
+                    "match": "="
+                },
+                {
+                    "name": "keyword.operator.ydsh",
+                    "match": "&&"
+                }
+            ]
+        },
+        "strings": {
+            "patterns": [
+                {
+                    "name": "string.quoted.double.ydsh",
+                    "begin": "\"",
+                    "end": "\"",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.ydsh",
+                            "match": "\\\\."
+                        }
+                    ]
+                },
+                {
+                    "name": "string.quoted.other",
+                    "match": "%['](\\w)+[']"
+                },
+                {
+                    "name": "string.quoted.single.ydsh",
+                    "begin": "'",
+                    "end": "'"
+                },
+                {
+                    "name": "string.quoted.other.ydsh",
+                    "begin": "\\$'",
+                    "patterns": [
+                        {
+                            "match": "(\\\\'|[^'])*"
+                        }
+                    ],
+                    "end": "'"
+                },
+                {
+                    "name": "string.regexp.ydsh",
+                    "match": "\\$/(\\\\/|[^/])*/[ims]{0,3}"
+                }
+            ]
+        },
+        "variable": {
+            "patterns": [
+                {
+                    "name": "variable.other.ydsh",
+                    "match": "\\$\\w+"
+                },
+                {
+                    "name": "variable.other.ydsh",
+                    "match": "\\${\\w+}"
+                },
+                {
+                    "name": "variable.other.ydsh",
+                    "match": "\\$(#|\\?|@|\\$|[0-9])"
+                },
+                {
+                    "name": "variable.other.ydsh",
+                    "match": "\\${(#|\\?|@|\\$|[0-9])}"
+                }
+            ]
+        },
+        "constants": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.bash",
+                    "match": "\\d"
                 }
             ]
         }
     },
-    "scopeName": ""
+    "scopeName": "source.ydsh"
 }

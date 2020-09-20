@@ -18,7 +18,7 @@
         }],
         "grammars": [{
             "language": "ydsh",
-            "scopeName": "",
+            "scopeName": "source.ydsh",
             "path": "./syntaxes/ydsh.tmLanguage.json"
         }]
     }
