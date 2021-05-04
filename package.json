@@ -2,11 +2,11 @@
     "name": "vscode-ydsh",
     "displayName": "vscode-ydsh",
     "description": "vscode extension for ydsh",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "license": "SEE LICENSE",
     "homepage": "https://github.com/sekiguchi-nagisa/vscode-ydsh/blob/master/README.md",
     "engines": {
-        "vscode": "^1.49.0"
+        "vscode": "^1.52.0"
     },
     "categories": [
         "Programming Languages"
@@ -16,6 +16,10 @@
         "type": "git",
         "url": "https://github.com/sekiguchi-nagisa/vscode-ydsh.git"
     },
+    "main": "./out/extension.js",
+    "activationEvents": [
+        "onLanguage:ydsh"
+    ],
     "contributes": {
         "languages": [
             {
@@ -39,9 +43,23 @@
         ]
     },
     "devDependencies": {
-        "vsce": "1.79.5"
+        "@types/mocha": "^8.2.2",
+        "@types/node": "^12.12.0",
+        "@types/vscode": "^1.52.0",
+        "@typescript-eslint/eslint-plugin": "^4.21.0",
+        "@typescript-eslint/parser": "^4.21.0",
+        "eslint": "^7.23.0",
+        "mocha": "^8.3.2",
+        "typescript": "^4.2.3",
+        "vsce": "^1.88.0",
+        "vscode-test": "^1.3.0"
     },
+    "dependencies": {
+        "vscode-languageclient": "^7.0.0"
+    },
+    "private": true,
     "scripts": {
+        "compile": "tsc -b",
         "build": "vsce package"
     }
 }

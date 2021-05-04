@@ -6,6 +6,7 @@ error() {
 }
 
 npm install || error npm install failed
+npm run-script compile
 npm run-script build || error build failed
 
 NAME="$(npm ls | head -n 1 | cut -d ' ' -f 1 | cut -d @ -f 1)"
