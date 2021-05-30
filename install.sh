@@ -5,7 +5,7 @@ error() {
     exit 1
 }
 
-npm install || error npm install failed
+npm ci || error npm install failed
 npm run-script compile
 npm run-script build || error build failed
 
