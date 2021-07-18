@@ -40,7 +40,29 @@
                 "scopeName": "source.ydsh",
                 "path": "./syntaxes/ydsh.tmLanguage.json"
             }
-        ]
+        ],
+        "configuration": {
+            "title": "ydshd",
+            "properties": {
+                "analyzer.executablePath": {
+                    "type": "string",
+                    "default": "ydshd",
+                    "description": "executable path of ydshd. default is ydshd"
+                },
+                "analyzer.logLevel": {
+                    "type": "string",
+                    "default": "info",
+                    "enum": [
+                        "info",
+                        "warning",
+                        "error",
+                        "fatal",
+                        "none"
+                    ],
+                    "description": "analyzer log level setting"
+                }
+            }
+        }
     },
     "devDependencies": {
         "@types/mocha": "^8.2.2",

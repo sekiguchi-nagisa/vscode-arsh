@@ -1,14 +1,32 @@
 import * as path from 'path';
-import { ExtensionContext, window as Window } from 'vscode';
+import { ExtensionContext, window, window as Window, workspace } from 'vscode';
 import { LanguageClient, LanguageClientOptions, RevealOutputChannelOn, ServerOptions, TransportKind } from 'vscode-languageclient/node';
 
 let client: LanguageClient;
 
+function getExecutablePath() : string {
+    var value : string = workspace.getConfiguration("analyzer").get("executablePath")
+    if (value == null || value == '') {
+        value = "ydshd"
+    }
+    return value
+}
+
+function getLogLevel() : string {
+    var value : string = workspace.getConfiguration("analyzer").get("logLevel")
+    if (value == null || value == '') {
+        value = "info"
+    }
+    return value
+}
+
 export function activate(context: ExtensionContext) {
     let serverOptions = {
-        command: "ydshd",
+        command: getExecutablePath(),
         args: [
-            "--language-server" //FIXME:
+            "--log",
+            getLogLevel(),
+            "--language-server",
         ]
     };
     let clientOptions = {
