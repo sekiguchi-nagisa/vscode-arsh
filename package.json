@@ -53,11 +53,11 @@
                     "type": "string",
                     "default": "info",
                     "enum": [
+                        "debug",
                         "info",
                         "warning",
                         "error",
-                        "fatal",
-                        "none"
+                        "fatal"
                     ],
                     "description": "analyzer log level setting"
                 }
