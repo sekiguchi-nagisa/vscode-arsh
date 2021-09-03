@@ -26,11 +26,12 @@
                 "id": "ydsh",
                 "aliases": [
                     "ydsh",
-                    "ydsh"
+                    "ds"
                 ],
                 "extensions": [
                     "ds"
                 ],
+                "firstLine": "^#!/usr/bin/env +ydsh\\b",
                 "configuration": "./language-configuration.json"
             }
         ],
