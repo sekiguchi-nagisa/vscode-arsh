@@ -47,7 +47,7 @@
                 },
                 {
                     "name": "keyword.other.ydsh",
-                    "match": "\\b(as|is|in|with|new)\\b"
+                    "match": "\\b(as|is|in|with|new|inlined|typeof)\\b"
                 }
             ]
         },
