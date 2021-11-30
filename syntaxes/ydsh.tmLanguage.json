@@ -55,7 +55,7 @@
             "patterns": [
                 {
                     "name": "storage.type.ydsh",
-                    "match": "\\b(var|let|import-env|export-env|function|source!|source|typedef)\\b"
+                    "match": "\\b(var|let|const|import-env|export-env|function|source!|source|typedef)\\b"
                 }
             ]
         },
