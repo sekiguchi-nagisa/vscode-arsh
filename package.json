@@ -6,7 +6,7 @@
     "license": "Apache-2.0",
     "homepage": "https://github.com/sekiguchi-nagisa/vscode-ydsh/blob/master/README.md",
     "engines": {
-        "vscode": "^1.62.0"
+        "vscode": "^1.63.1"
     },
     "categories": [
         "Programming Languages"
