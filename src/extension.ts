@@ -15,7 +15,7 @@ function getExecutablePath() : string {
 function getLogLevel() : string {
     var value : string = workspace.getConfiguration("analyzer").get("logLevel")
     if (value == null || value == '') {
-        value = "info"
+        value = "warning"
     }
     return value
 }

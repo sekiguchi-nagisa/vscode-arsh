@@ -52,7 +52,7 @@
                 },
                 "analyzer.logLevel": {
                     "type": "string",
-                    "default": "info",
+                    "default": "warning",
                     "enum": [
                         "debug",
                         "info",
