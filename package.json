@@ -63,6 +63,11 @@
                     "description": "analyzer log level setting"
                 }
             }
+        },
+        "configurationDefaults": {
+            "[ydsh]": {
+                "editor.semanticHighlighting.enabled": true
+            }
         }
     },
     "devDependencies": {
