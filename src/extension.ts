@@ -36,6 +36,9 @@ export function activate(context: ExtensionContext) {
                 language: "ydsh",
             }
         ],
+        synchronize: {
+            configurationSection: ["analyzer.logLevel"]
+        }
     };
 
     try {
