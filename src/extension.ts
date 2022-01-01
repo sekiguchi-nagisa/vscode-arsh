@@ -5,7 +5,7 @@ import { LanguageClient, LanguageClientOptions, RevealOutputChannelOn, ServerOpt
 let client: LanguageClient;
 
 function getExecutablePath() : string {
-    var value : string = workspace.getConfiguration("analyzer").get("executablePath")
+    var value : string = workspace.getConfiguration("ydshd").get("executablePath")
     if (value == null || value == '') {
         value = "ydshd"
     }
@@ -13,7 +13,7 @@ function getExecutablePath() : string {
 }
 
 function getLogLevel() : string {
-    var value : string = workspace.getConfiguration("analyzer").get("logLevel")
+    var value : string = workspace.getConfiguration("ydshd").get("logLevel")
     if (value == null || value == '') {
         value = "warning"
     }
@@ -37,7 +37,7 @@ export function activate(context: ExtensionContext) {
             }
         ],
         synchronize: {
-            configurationSection: ["analyzer.logLevel"]
+            configurationSection: ["ydshd.logLevel"]
         }
     };
 

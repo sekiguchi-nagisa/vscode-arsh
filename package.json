@@ -45,12 +45,12 @@
         "configuration": {
             "title": "ydshd",
             "properties": {
-                "analyzer.executablePath": {
+                "ydshd.executablePath": {
                     "type": "string",
                     "default": "ydshd",
                     "description": "executable path of ydshd. default is ydshd"
                 },
-                "analyzer.logLevel": {
+                "ydshd.logLevel": {
                     "type": "string",
                     "default": "warning",
                     "enum": [
