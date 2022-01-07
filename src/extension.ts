@@ -37,7 +37,11 @@ export function activate(context: ExtensionContext) {
             }
         ],
         synchronize: {
-            configurationSection: ["ydshd.logLevel"]
+            configurationSection: [
+                "ydshd.logLevel",
+                "ydshd.commandCompletion",
+                "ydshd.commandArgumentCompletionEnabled"
+            ]
         }
     };
 

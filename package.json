@@ -61,6 +61,26 @@
                         "fatal"
                     ],
                     "description": "analyzer log level setting"
+                },
+                "ydshd.commandCompletion": {
+                    "type": "string",
+                    "default": "default",
+                    "enum": [
+                        "disabled",
+                        "default",
+                        "all"
+                    ],
+                    "enumDescriptions": [
+                        "disable command completion",
+                        "only complete builtin/user-defined commands",
+                        "complete arbitrary commands"
+                    ],
+                    "description": "command completion setting"
+                },
+                "ydshd.commandArgumentCompletionEnabled": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "enable command argument (file path) completion"
                 }
             }
         },
