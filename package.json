@@ -42,6 +42,14 @@
                 "path": "./syntaxes/ydsh.tmLanguage.json"
             }
         ],
+        "semanticTokenScopes": [
+            {
+                "language": "ydsh",
+                "scopes": {
+                    "variable": ["variable.other.ydsh"]
+                }
+            }
+        ],
         "configuration": {
             "title": "ydshd",
             "properties": {
