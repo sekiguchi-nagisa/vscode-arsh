@@ -40,7 +40,8 @@ export function activate(context: ExtensionContext) {
             configurationSection: [
                 "ydshd.logLevel",
                 "ydshd.commandCompletion",
-                "ydshd.commandArgumentCompletionEnabled"
+                "ydshd.commandArgumentCompletionEnabled",
+                "ydshd.semanticHighlightEnabled"
             ]
         }
     };
