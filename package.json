@@ -85,14 +85,22 @@
                     ],
                     "description": "command completion setting"
                 },
-                "ydshd.commandArgumentCompletionEnabled": {
-                    "type": "boolean",
-                    "default": false,
+                "ydshd.commandArgumentCompletion": {
+                    "type": "string",
+                    "default": "disabled",
+                    "enum": [
+                        "enabled",
+                        "disabled"
+                    ],
                     "description": "enable command argument (file path) completion"
                 },
-                "ydshd.semanticHighlightEnabled": {
-                    "type": "boolean",
-                    "default": true,
+                "ydshd.semanticHighlight": {
+                    "type": "string",
+                    "default": "enabled",
+                    "enum": [
+                        "enabled",
+                        "disabled"
+                    ],
                     "description": "enable semantic highlight (server side syntax highlight)"
                 }
             }
