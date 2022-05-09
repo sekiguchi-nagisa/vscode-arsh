@@ -89,6 +89,11 @@
                     "type": "boolean",
                     "default": false,
                     "description": "enable command argument (file path) completion"
+                },
+                "ydshd.semanticHighlightEnabled": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "enable semantic highlight (server side syntax highlight)"
                 }
             }
         },
