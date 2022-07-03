@@ -77,10 +77,6 @@
                     ]
                 },
                 {
-                    "name": "string.quoted.other.ydsh",
-                    "match": "%['](\\w)+[']"
-                },
-                {
                     "name": "string.quoted.single.ydsh",
                     "begin": "'",
                     "end": "'"
