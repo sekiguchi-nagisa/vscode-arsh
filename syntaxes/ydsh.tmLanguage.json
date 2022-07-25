@@ -43,7 +43,7 @@
             "patterns": [
                 {
                     "name": "keyword.control.ydsh",
-                    "match": "\\b(assert|break|case|catch|continue|coproc|do|else|elif|finally|for|if|return|try|throw|while|defer)\\b"
+                    "match": "\\b(assert|break|case|catch|continue|coproc|do|else|elif|finally|for|if|return|try|throw|while|defer|time)\\b"
                 },
                 {
                     "name": "keyword.operator.ydsh",
