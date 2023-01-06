@@ -137,7 +137,7 @@
             "patterns": [
                 {
                     "name": "support.function.ydsh",
-                    "match": "\\b(:|__gets|__puts|_exit|bg|cd|checkenv|command|complete|echo|eval|exec|exit|false|fg|hash|help|kill|pwd|read|setenv|shctl|test|true|ulimit|umask|unsetenv|wait)\\b"
+                    "match": "\\b(:|__gets|__puts|_exit|bg|cd|checkenv|command|complete|echo|eval|exec|exit|false|fg|hash|help|jobs|kill|pwd|read|setenv|shctl|test|true|ulimit|umask|unsetenv|wait)\\b"
                 }
             ]
         }
