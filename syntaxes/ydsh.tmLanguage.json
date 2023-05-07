@@ -47,7 +47,7 @@
                 },
                 {
                     "name": "keyword.operator.ydsh",
-                    "match": "\\b(as|is|with|and|or|xor)\\b"
+                    "match": "\\b(as|as\\?|is|with|and|or|xor)\\b"
                 },
                 {
                     "name": "keyword.other.ydsh",
