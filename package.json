@@ -2,7 +2,7 @@
     "name": "vscode-ydsh",
     "displayName": "vscode-ydsh",
     "description": "vscode extension for ydsh",
-    "version": "0.12.0",
+    "version": "0.12.1",
     "license": "Apache-2.0",
     "homepage": "https://github.com/sekiguchi-nagisa/vscode-ydsh/blob/master/README.md",
     "engines": {
