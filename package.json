@@ -17,9 +17,7 @@
         "url": "https://github.com/sekiguchi-nagisa/vscode-ydsh.git"
     },
     "main": "./out/extension.js",
-    "activationEvents": [
-        "onLanguage:ydsh"
-    ],
+    "activationEvents": [],
     "contributes": {
         "languages": [
             {
