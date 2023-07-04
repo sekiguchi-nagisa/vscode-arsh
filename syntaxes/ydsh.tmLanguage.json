@@ -141,7 +141,7 @@
                 },
                 {
                     "name": "support.function.ydsh",
-                    "match": "\\b(hash|help|jobs|kill|popd|printf|pushd|pwd|read|setenv|shctl|test|true|ulimit|umask|unsetenv|wait)\\b"
+                    "match": "\\b(getenv|hash|help|jobs|kill|popd|printf|pushd|pwd|read|setenv|shctl|test|true|ulimit|umask|unsetenv|wait)\\b"
                 }
             ]
         }
