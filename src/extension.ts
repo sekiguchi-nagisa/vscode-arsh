@@ -20,7 +20,7 @@ function getLogLevel() : string {
     return value
 }
 
-export function activate(context: ExtensionContext) {
+export function activate(context: ExtensionContext) : void {
     let serverOptions = {
         command: getExecutablePath(),
         args: [
@@ -48,7 +48,7 @@ export function activate(context: ExtensionContext) {
 
     try {
         client = new LanguageClient('vscode-ydsh', 'vscode-ydsh', serverOptions, clientOptions)
-        context.subscriptions.push(client.start());
+        client.start()
     } catch(e) {
         Window.showErrorMessage(`The extension couldn't be started. See the output channel for details.`);
         return;
