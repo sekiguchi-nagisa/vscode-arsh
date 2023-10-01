@@ -41,7 +41,8 @@ export function activate(context: ExtensionContext) : void {
                 "ydshd.logLevel",
                 "ydshd.commandCompletion",
                 "ydshd.commandArgumentCompletion",
-                "ydshd.semanticHighlight"
+                "ydshd.semanticHighlight",
+                "ydshd.rename"
             ]
         }
     };
