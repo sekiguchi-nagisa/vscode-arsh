@@ -19,27 +19,8 @@ jobs:
           node-version: '18'
       - run: |
           ./install.sh --no-install
-      - name: Set the asset name
-        id: get_asset_name
-        run: |
-          echo ::set-output name=ASSET_NAME::$(ls | grep .vsix) 
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Release
+        uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
           draft: true
-          prerelease: false
-      - name: Upload Asset
-        id: upload-release-vsix-asset 
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}  
-          asset_path: ${{ steps.get_asset_name.outputs.ASSET_NAME }}
-          asset_name: ${{ steps.get_asset_name.outputs.ASSET_NAME }}
-          asset_content_type: application/vsix
+          files: '*.vsix'
