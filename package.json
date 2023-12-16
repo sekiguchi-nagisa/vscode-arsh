@@ -1,10 +1,10 @@
 {
-    "name": "vscode-ydsh",
-    "displayName": "vscode-ydsh",
-    "description": "vscode extension for ydsh",
+    "name": "vscode-arsh",
+    "displayName": "vscode-arsh",
+    "description": "vscode extension for arsh",
     "version": "0.16.2",
     "license": "Apache-2.0",
-    "homepage": "https://github.com/sekiguchi-nagisa/vscode-ydsh/blob/master/README.md",
+    "homepage": "https://github.com/sekiguchi-nagisa/vscode-arsh/blob/master/README.md",
     "engines": {
         "vscode": "^1.75.0"
     },
@@ -14,49 +14,51 @@
     "publisher": "nagisa-sekiguchi",
     "repository": {
         "type": "git",
-        "url": "https://github.com/sekiguchi-nagisa/vscode-ydsh.git"
+        "url": "https://github.com/sekiguchi-nagisa/vscode-arsh.git"
     },
     "main": "./out/extension.js",
     "activationEvents": [],
     "contributes": {
         "languages": [
             {
-                "id": "ydsh",
+                "id": "arsh",
                 "aliases": [
-                    "ydsh",
+                    "arsh",
                     "ds"
                 ],
                 "extensions": [
-                    "ds"
+                    "ds",
+                    "ar",
+                    "arsh"
                 ],
-                "firstLine": "^#!/usr/bin/env +ydsh\\b",
+                "firstLine": "^#!/usr/bin/env +(arsh|ydsh)\\b",
                 "configuration": "./language-configuration.json"
             }
         ],
         "grammars": [
             {
-                "language": "ydsh",
-                "scopeName": "source.ydsh",
-                "path": "./syntaxes/ydsh.tmLanguage.json"
+                "language": "arsh",
+                "scopeName": "source.arsh",
+                "path": "./syntaxes/arsh.tmLanguage.json"
             }
         ],
         "semanticTokenScopes": [
             {
-                "language": "ydsh",
+                "language": "arsh",
                 "scopes": {
-                    "variable": ["variable.other.ydsh"]
+                    "variable": ["variable.other.arsh"]
                 }
             }
         ],
         "configuration": {
-            "title": "ydshd",
+            "title": "arshd",
             "properties": {
-                "ydshd.executablePath": {
+                "arshd.executablePath": {
                     "type": "string",
-                    "default": "ydshd",
-                    "description": "executable path of ydshd. default is ydshd"
+                    "default": "arshd",
+                    "description": "executable path of arshd. default is arshd"
                 },
-                "ydshd.logLevel": {
+                "arshd.logLevel": {
                     "type": "string",
                     "default": "warning",
                     "enum": [
@@ -68,7 +70,7 @@
                     ],
                     "description": "analyzer log level setting"
                 },
-                "ydshd.commandCompletion": {
+                "arshd.commandCompletion": {
                     "type": "string",
                     "default": "default",
                     "enum": [
@@ -83,7 +85,7 @@
                     ],
                     "description": "command completion setting"
                 },
-                "ydshd.commandArgumentCompletion": {
+                "arshd.commandArgumentCompletion": {
                     "type": "string",
                     "default": "disabled",
                     "enum": [
@@ -92,7 +94,7 @@
                     ],
                     "description": "enable command argument (file path) completion"
                 },
-                "ydshd.semanticHighlight": {
+                "arshd.semanticHighlight": {
                     "type": "string",
                     "default": "enabled",
                     "enum": [
@@ -101,7 +103,7 @@
                     ],
                     "description": "enable semantic highlight (server side syntax highlight)"
                 },
-                "ydshd.rename": {
+                "arshd.rename": {
                     "type": "string",
                     "default": "disabled",
                     "enum": [
@@ -113,7 +115,7 @@
             }
         },
         "configurationDefaults": {
-            "[ydsh]": {
+            "[arsh]": {
                 "editor.semanticHighlighting.enabled": true
             }
         }

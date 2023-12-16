@@ -1,3 +1,3 @@
-# vscode-ydsh 
+# vscode-arsh 
 
-vscode extension for ydsh
+vscode extension for arsh

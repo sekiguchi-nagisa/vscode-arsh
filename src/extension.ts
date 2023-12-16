@@ -5,15 +5,15 @@ import { LanguageClient, LanguageClientOptions, RevealOutputChannelOn, ServerOpt
 let client: LanguageClient;
 
 function getExecutablePath() : string {
-    var value : string = workspace.getConfiguration("ydshd").get("executablePath")
+    var value : string = workspace.getConfiguration("arshd").get("executablePath")
     if (value == null || value == '') {
-        value = "ydshd"
+        value = "arshd"
     }
     return value
 }
 
 function getLogLevel() : string {
-    var value : string = workspace.getConfiguration("ydshd").get("logLevel")
+    var value : string = workspace.getConfiguration("arshd").get("logLevel")
     if (value == null || value == '') {
         value = "warning"
     }
@@ -33,22 +33,22 @@ export function activate(context: ExtensionContext) : void {
         documentSelector: [
             {
                 scheme: "file",
-                language: "ydsh",
+                language: "arsh",
             }
         ],
         synchronize: {
             configurationSection: [
-                "ydshd.logLevel",
-                "ydshd.commandCompletion",
-                "ydshd.commandArgumentCompletion",
-                "ydshd.semanticHighlight",
-                "ydshd.rename"
+                "arshd.logLevel",
+                "arshd.commandCompletion",
+                "arshd.commandArgumentCompletion",
+                "arshd.semanticHighlight",
+                "arshd.rename"
             ]
         }
     };
 
     try {
-        client = new LanguageClient('vscode-ydsh', 'vscode-ydsh', serverOptions, clientOptions)
+        client = new LanguageClient('vscode-arsh', 'vscode-arsh', serverOptions, clientOptions)
         client.start()
     } catch(e) {
         Window.showErrorMessage(`The extension couldn't be started. See the output channel for details.`);

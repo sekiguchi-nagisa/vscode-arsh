@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-    "name": "ydsh",
+    "name": "arsh",
     "patterns": [
         {
             "include": "#keywords"
@@ -31,26 +31,26 @@
                     "begin": "#",
                     "beginCaptures": {
                         "0": {
-                            "name": "punctuation.definition.comment.ydsh"
+                            "name": "punctuation.definition.comment.arsh"
                         }
                     },
                     "end": "$",
-                    "name": "comment.line.number-sign.ydsh"
+                    "name": "comment.line.number-sign.arsh"
                 }
             ]
         },
         "keywords": {
             "patterns": [
                 {
-                    "name": "keyword.control.ydsh",
+                    "name": "keyword.control.arsh",
                     "match": "\\b(assert|break|case|catch|continue|coproc|do|else|elif|finally|for|if|return|try|throw|while|defer|time)\\b"
                 },
                 {
-                    "name": "keyword.operator.ydsh",
+                    "name": "keyword.operator.arsh",
                     "match": "\\b(as|as\\?|is|with|and|or|xor)\\b"
                 },
                 {
-                    "name": "keyword.other.ydsh",
+                    "name": "keyword.other.arsh",
                     "match": "\\b(in|new|inlined|typeof)\\b"
                 }
             ]
@@ -58,7 +58,7 @@
         "storages": {
             "patterns": [
                 {
-                    "name": "storage.type.ydsh",
+                    "name": "storage.type.arsh",
                     "match": "\\b(var|let|const|import-env|importenv|export-env|exportenv|function|source\\?|source|alias|typedef)\\b"
                 }
             ]
@@ -66,23 +66,23 @@
         "strings": {
             "patterns": [
                 {
-                    "name": "string.quoted.double.ydsh",
+                    "name": "string.quoted.double.arsh",
                     "begin": "\"",
                     "end": "\"",
                     "patterns": [
                         {
-                            "name": "constant.character.escape.ydsh",
+                            "name": "constant.character.escape.arsh",
                             "match": "\\\\."
                         }
                     ]
                 },
                 {
-                    "name": "string.quoted.single.ydsh",
+                    "name": "string.quoted.single.arsh",
                     "begin": "'",
                     "end": "'"
                 },
                 {
-                    "name": "string.quoted.other.ydsh",
+                    "name": "string.quoted.other.arsh",
                     "begin": "\\$'",
                     "patterns": [
                         {
@@ -92,7 +92,7 @@
                     "end": "'"
                 },
                 {
-                    "name": "string.regexp.ydsh",
+                    "name": "string.regexp.arsh",
                     "match": "\\$/(\\\\/|[^/])*/[ims]{0,3}"
                 }
             ]
@@ -100,19 +100,19 @@
         "variables": {
             "patterns": [
                 {
-                    "name": "variable.other.ydsh",
+                    "name": "variable.other.arsh",
                     "match": "\\$\\w+"
                 },
                 {
-                    "name": "variable.other.ydsh",
+                    "name": "variable.other.arsh",
                     "match": "\\${\\w+}"
                 },
                 {
-                    "name": "variable.other.ydsh",
+                    "name": "variable.other.arsh",
                     "match": "\\$(#|\\?|@|\\$|[0-9])"
                 },
                 {
-                    "name": "variable.other.ydsh",
+                    "name": "variable.other.arsh",
                     "match": "\\${(#|\\?|@|\\$|[0-9])}"
                 }
             ]
@@ -120,15 +120,15 @@
         "constants": {
             "patterns": [
                 {
-                    "name": "constant.numeric.ydsh",
+                    "name": "constant.numeric.arsh",
                     "match": "\\b((0|[1-9][0-9]*)(\\.[0-9]+([eE](\\+|-)?[0-9]+)?)?)\\b"
                 },
                 {
-                    "name": "constant.numeric.ydsh",
+                    "name": "constant.numeric.arsh",
                     "match": "\\b(0[oO]?[0-7]+)\\b"
                 },
                 {
-                    "name": "constant.numeric.ydsh",
+                    "name": "constant.numeric.arsh",
                     "match": "\\b(0[xX]?[0-9a-fA-F]+)\\b"
                 }
             ]
@@ -136,15 +136,15 @@
         "supports": {
             "patterns": [
                 {
-                    "name": "support.function.ydsh",
+                    "name": "support.function.arsh",
                     "match": "\\b(:|__gets|__puts|_exit|bg|call|cd|checkenv|command|complete|dirs|disown|echo|eval|exec|exit|false|fg)\\b"
                 },
                 {
-                    "name": "support.function.ydsh",
+                    "name": "support.function.arsh",
                     "match": "\\b(getenv|hash|help|jobs|kill|popd|printf|pushd|pwd|read|setenv|shctl|test|true|ulimit|umask|unsetenv|wait)\\b"
                 }
             ]
         }
     },
-    "scopeName": "source.ydsh"
+    "scopeName": "source.arsh"
 }
