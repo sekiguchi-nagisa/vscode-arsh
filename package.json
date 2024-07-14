@@ -46,7 +46,8 @@
             {
                 "language": "arsh",
                 "scopes": {
-                    "variable": ["variable.other.arsh"]
+                    "variable": ["variable.other.arsh"],
+                    "commandArgument": ["constant.other"]
                 }
             }
         ],
