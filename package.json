@@ -42,6 +42,13 @@
                 "path": "./syntaxes/arsh.tmLanguage.json"
             }
         ],
+        "semanticTokenTypes": [
+            {
+                "id": "commandArgument",
+                "description": "command argument",
+                "superType": "parameter"
+            }
+        ],
         "semanticTokenScopes": [
             {
                 "language": "arsh",
