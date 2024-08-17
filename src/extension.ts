@@ -1,5 +1,5 @@
 import * as path from 'path';
-import { ExtensionContext, window, window as Window, workspace } from 'vscode';
+import { ExtensionContext, window as Window, workspace, commands } from 'vscode';
 import { LanguageClient, LanguageClientOptions, RevealOutputChannelOn, ServerOptions, TransportKind } from 'vscode-languageclient/node';
 
 let client: LanguageClient;
@@ -20,15 +20,25 @@ function getLogLevel() : string {
     return value
 }
 
-export function activate(context: ExtensionContext) : void {
-    let serverOptions = {
-        command: getExecutablePath(),
-        args: [
-            "--log",
-            getLogLevel(),
-            "--language-server",
-        ]
-    };
+let serverOptions : ServerOptions = {
+    command: "",
+    args: []
+}
+function initServerOptions() {
+    serverOptions['command'] = getExecutablePath()
+    serverOptions['args'] = [
+        "--log",
+        getLogLevel(),
+        "--language-server",
+    ]
+}
+
+export async function activate(context: ExtensionContext) {
+    context.subscriptions.push(
+        commands.registerCommand('arshd.restart', async ()=> await restart() )
+    )
+
+    initServerOptions()
     let clientOptions = {
         documentSelector: [
             {
@@ -49,10 +59,21 @@ export function activate(context: ExtensionContext) : void {
 
     try {
         client = new LanguageClient('vscode-arsh', 'vscode-arsh', serverOptions, clientOptions)
-        client.start()
+        await client.start()
     } catch(e) {
-        Window.showErrorMessage(`The extension couldn't be started. See the output channel for details.`);
-        return;
+        Window.showErrorMessage("failed to start arsh\n" + `${e}`);
+    }
+}
+
+export async function restart() {
+    try {
+        if(!client) {
+            throw new Error("client has not initialized yet")
+        }
+        initServerOptions()
+        await client.restart()
+    } catch (e) {
+        Window.showErrorMessage("failed to restart arshd\n" + `${e}`);
     }
 }
 
@@ -61,6 +82,4 @@ export function deactivate(): Thenable<void> | undefined {
       return undefined;
     }
     return client.stop();
-  }
-  
-  
+}

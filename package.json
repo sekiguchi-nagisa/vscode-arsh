@@ -126,7 +126,14 @@
             "[arsh]": {
                 "editor.semanticHighlighting.enabled": true
             }
-        }
+        },
+        "commands": [
+            {
+                "title": "restart language server",
+                "category": "arshd",
+                "command": "arshd.restart"
+            }
+        ]
     },
     "devDependencies": {
         "@types/mocha": "^9.1.0",
