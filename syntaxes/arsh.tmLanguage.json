@@ -59,7 +59,7 @@
             "patterns": [
                 {
                     "name": "storage.type.arsh",
-                    "match": "\\b(var|let|const|import-env|importenv|export-env|exportenv|function|source\\?|source|alias|typedef)\\b"
+                    "match": "\\b(var|let|const|import-env|importenv|export-env|exportenv|function|source\\?|source|alias|typedef|type)\\b"
                 }
             ]
         },
