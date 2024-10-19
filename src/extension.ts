@@ -49,8 +49,7 @@ export async function activate(context: ExtensionContext) {
         synchronize: {
             configurationSection: [
                 "arshd.logLevel",
-                "arshd.commandCompletion",
-                "arshd.commandArgumentCompletion",
+                "arshd.fileNameCompletion",
                 "arshd.semanticHighlight",
                 "arshd.rename"
             ]

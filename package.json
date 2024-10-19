@@ -78,29 +78,14 @@
                     ],
                     "description": "analyzer log level setting"
                 },
-                "arshd.commandCompletion": {
-                    "type": "string",
-                    "default": "default",
-                    "enum": [
-                        "disabled",
-                        "default",
-                        "all"
-                    ],
-                    "enumDescriptions": [
-                        "disable command completion",
-                        "only complete builtin/user-defined commands",
-                        "complete arbitrary commands"
-                    ],
-                    "description": "command completion setting"
-                },
-                "arshd.commandArgumentCompletion": {
+                "arshd.fileNameCompletion": {
                     "type": "string",
                     "default": "disabled",
                     "enum": [
                         "enabled",
                         "disabled"
                     ],
-                    "description": "enable command argument (file path) completion"
+                    "description": "enable filename completion (also complete external commands)"
                 },
                 "arshd.semanticHighlight": {
                     "type": "string",
