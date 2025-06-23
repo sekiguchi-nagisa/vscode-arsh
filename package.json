@@ -28,7 +28,6 @@
                 ],
                 "extensions": [
                     "ds",
-                    "ar",
                     "arsh"
                 ],
                 "firstLine": "^#!/usr/bin/env +(arsh|ydsh)\\b",
