@@ -16,6 +16,6 @@ PACKAGE="${NAME}-${VERSION}.vsix"
 echo $PACKAGE
 test -f "$PACKAGE" || error not found package: "$PACKAGE"
 
-if [ "$1" != '--no-install' ]; then
+if [ "$1" != '--no-install' ] && [ "$1" != '-n' ]; then
     code --install-extension "$PACKAGE"
 fi
