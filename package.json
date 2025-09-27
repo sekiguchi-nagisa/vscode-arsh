@@ -2,7 +2,7 @@
     "name": "vscode-arsh",
     "displayName": "vscode-arsh",
     "description": "vscode extension for arsh",
-    "version": "0.23.2",
+    "version": "0.23.3",
     "license": "Apache-2.0",
     "homepage": "https://github.com/sekiguchi-nagisa/vscode-arsh/blob/master/README.md",
     "engines": {
