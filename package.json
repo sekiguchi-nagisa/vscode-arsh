@@ -52,8 +52,12 @@
             {
                 "language": "arsh",
                 "scopes": {
-                    "variable": ["variable.other.arsh"],
-                    "commandArgument": ["constant.other"]
+                    "variable": [
+                        "variable.other.arsh"
+                    ],
+                    "commandArgument": [
+                        "constant.other"
+                    ]
                 }
             }
         ],
@@ -123,11 +127,11 @@
         "@types/mocha": "^10.0.10",
         "@types/node": "^22.13.16",
         "@types/vscode": "^1.75.0",
+        "@vscode/test-electron": "^2.3.10",
+        "@vscode/vsce": "^3.3.2",
         "eslint": "^9.3.0",
         "mocha": "^11.1.0",
-        "typescript": "^5.3.3",
-        "@vscode/vsce": "^3.0.0",
-        "@vscode/test-electron": "^2.3.10"
+        "typescript": "^5.3.3"
     },
     "dependencies": {
         "vscode-languageclient": "^9.0.0"
