@@ -93,7 +93,7 @@
                 },
                 {
                     "name": "string.regexp.arsh",
-                    "match": "\\$/(\\\\/|[^/])*/[ims]*"
+                    "match": "\\$/(\\\\/|[^/])*/[imsuv]*"
                 }
             ]
         },
