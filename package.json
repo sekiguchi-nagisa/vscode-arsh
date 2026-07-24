@@ -136,6 +136,10 @@
     "dependencies": {
         "vscode-languageclient": "^9.0.0"
     },
+    "allowScripts": {
+        "@vscode/vsce-sign@2.0.9": true,
+        "keytar@7.9.0": true
+    },
     "private": true,
     "scripts": {
         "compile": "tsc -b",
