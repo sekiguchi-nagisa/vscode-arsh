@@ -143,6 +143,7 @@
     "private": true,
     "scripts": {
         "compile": "tsc -b",
-        "build": "vsce package"
+        "build": "vsce package",
+        "ls": "vsce ls"
     }
 }

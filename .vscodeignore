@@ -2,3 +2,10 @@
 .vscode-test/**
 .gitignore
 vsc-extension-quickstart.md
+.venv/**
+.github/**
+.mise.local.toml
+.git/**
+.idea/**
+node_modules/**
+install.sh
