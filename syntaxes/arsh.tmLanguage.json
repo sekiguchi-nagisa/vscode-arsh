@@ -131,7 +131,7 @@
             "patterns": [
                 {
                     "name": "entity.name.function.arsh",
-                    "match": "\\b(:|__gets|__puts|_exit|bg|call|cd|checkenv|command|complete|dirs|disown|echo|eval|exec|exit|false|fg)\\b"
+                    "match": "\\b(__gets|__puts|_exit|bg|call|cd|checkenv|command|complete|dirs|disown|echo|eval|exec|exit|false|fg)\\b"
                 },
                 {
                     "name": "entity.name.function.arsh",
