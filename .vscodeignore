@@ -7,5 +7,4 @@ vsc-extension-quickstart.md
 .mise.local.toml
 .git/**
 .idea/**
-node_modules/**
 install.sh
