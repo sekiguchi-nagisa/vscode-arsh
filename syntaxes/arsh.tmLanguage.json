@@ -21,20 +21,14 @@
             "include": "#storages"
         },
         {
-            "include": "#supports"
+            "include": "#entities"
         }
     ],
     "repository": {
         "comment": {
             "patterns": [
                 {
-                    "begin": "#",
-                    "beginCaptures": {
-                        "0": {
-                            "name": "punctuation.definition.comment.arsh"
-                        }
-                    },
-                    "end": "$",
+                    "match": "(^|[ \\t]+)#.*$",
                     "name": "comment.line.number-sign.arsh"
                 }
             ]
@@ -133,14 +127,14 @@
                 }
             ]
         },
-        "supports": {
+        "entities": {
             "patterns": [
                 {
-                    "name": "support.function.arsh",
+                    "name": "entity.name.function.arsh",
                     "match": "\\b(:|__gets|__puts|_exit|bg|call|cd|checkenv|command|complete|dirs|disown|echo|eval|exec|exit|false|fg)\\b"
                 },
                 {
-                    "name": "support.function.arsh",
+                    "name": "entity.name.function.arsh",
                     "match": "\\b(getenv|hash|help|jobs|kill|popd|printf|pushd|pwd|read|setenv|shctl|test|true|ulimit|umask|unsetenv|wait)\\b"
                 }
             ]
